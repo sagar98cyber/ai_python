@@ -30,7 +30,7 @@ def splitFunction(parsedString):                #function to split the string an
     target.append(myList[4])
 
 
-with open('iris_dataset.csv',buffering=200000) as f:
+with open('pracs 2\iris_dataset.csv',buffering=200000) as f:
     for line in f:
         splitFunction(line)
 
@@ -50,7 +50,7 @@ df.head()
 
 parserFunction('Petal Length',df)
 
-df = pd.DataFrame({'Petal Length': petalWidth})
+df = pd.DataFrame({'Petal Width': petalWidth})
 df.head()
 
 parserFunction('Petal Width',df)
