@@ -1,10 +1,13 @@
 from __future__ import print_function
+from cgi import test
 import numpy as np
 import pandas as pd
+from scipy import rand
 from sklearn.impute import SimpleImputer
 from sklearn.preprocessing import LabelEncoder
 from sklearn.compose import ColumnTransformer
 from sklearn.preprocessing import OneHotEncoder
+from sklearn.model_selection import train_test_split as tts
 
 dataset  = pd.read_csv('Data.csv')
 X = dataset.iloc[:,:-1].values
@@ -23,4 +26,14 @@ X[:,0]=LE_X.fit_transform(X[:,0])
 
 ct = ColumnTransformer(transformers=[('encoder',OneHotEncoder(),[0])],remainder='passthrough')
 X=np.array(ct.fit_transform(X))
-print(X)
+#print(X)
+
+le = LabelEncoder()
+Y = le.fit_transform(Y)
+#print(Y)
+
+X_train, X_test, Y_train, Y_test = tts(X,Y,test_size=0.2,random_state=1)
+print(X_train)
+print(X_test)
+print(Y_train)
+print(Y_test)
