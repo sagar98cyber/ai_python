@@ -14,7 +14,7 @@ X = dataset.iloc[:,:-1].values
 Y = dataset.iloc[:,-1].values
 print(X)
 print(Y)
-
+'''
 imputer=SimpleImputer(missing_values=np.nan,strategy='mean')
 imputer.fit(X[:,1:3])
 X[:,1:3]=imputer.transform(X[:,1:3])
@@ -37,3 +37,4 @@ print(X_train)
 print(X_test)
 print(Y_train)
 print(Y_test)
+'''

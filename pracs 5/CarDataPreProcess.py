@@ -1,0 +1,40 @@
+from __future__ import print_function
+from cgi import test
+import numpy as np
+import pandas as pd
+from scipy import rand
+from sklearn.impute import SimpleImputer
+from sklearn.preprocessing import LabelEncoder
+from sklearn.compose import ColumnTransformer
+from sklearn.preprocessing import OneHotEncoder
+from sklearn.model_selection import train_test_split as tts
+
+
+dataset  = pd.read_csv('car_ad.csv')
+X = dataset.iloc[:,:-2].values
+Y = dataset.iloc[2,3,5].values
+print(X)
+print(Y)
+
+#imputer=SimpleImputer(missing_values=np.nan,strategy='mean')
+#imputer.fit(X[:,1:3])
+#X[:,1:3]=imputer.transform(X[:,1:3])
+#print(X)
+
+#LE_X = LabelEncoder()
+#X[:,0]=LE_X.fit_transform(X[:,0])
+#print(X)
+
+#ct = ColumnTransformer(transformers=[('encoder',OneHotEncoder(),[0])],remainder='passthrough')
+#X=np.array(ct.fit_transform(X))
+#print(X)
+
+#le = LabelEncoder()
+#Y = le.fit_transform(Y)
+#print(Y)
+
+#X_train, X_test, Y_train, Y_test = tts(X,Y,test_size=0.4,random_state=1)
+#print(X_train)
+#print(X_test)
+#print(Y_train)
+#print(Y_test)
