@@ -14,7 +14,7 @@ from sklearn.svm import SVC
 
 
 
-url = "C:\\Users\\GFSU\\Downloads\\iris.data"
+url = "iris.csv"
 names= ['sepal-length', 'sepal-width', 'petal-length', 'petal-width', 'class']
 dataset= pandas.read_csv(url, names=names)
 

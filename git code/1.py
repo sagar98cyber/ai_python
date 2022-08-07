@@ -1,25 +1,32 @@
 import numpy as np
+
+
 a = np.array([[10,20]])
 b = np.array([[15,25]])
 print(a)
 print(b, end="=B\n")
-a+b
 
-a.T+b.T
+x = a+b
+print(f'Addition:\n {x}')
+
+x = a.T+b.T
+print(f'Add: \n {x}')
 #(a+b).T
 
-a - b
+x = a - b
+print(f'Substraction: \n {x}')
 
 #scalar
 s = 5
 n = np.array([[5,7]])
-s * n
+x = s * n
+print(f'Scalar: \n {x}')
 
 #matrix multiplication
 n = np.array([[11,15]])
 m = np.array([[4,2]])
-n * m
-
+x = n * m
+print(f'multiplication: \n {x}')
 #np.dot(n,m)
 
 #matrix scalar multiplication
@@ -37,7 +44,6 @@ IM3 = np.eye(3)
 print(IM3, end=" =IM 3\n")
 
 #inverse matrix
-import numpy as np
 a = ([[1,2,0],[0,1,2],[2,0,1]])
 print (a, end=" =a\n\n")
 print(np.linalg.inv(a), end=" =|a|")

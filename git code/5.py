@@ -4,18 +4,18 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 # read data
-df=pd.read_csv('E:\MD\headbrain.csv')
+df=pd.read_csv('headbrain.csv')
 
 
-np.corrcoef(X, Y)
-
+#np.corrcoef(X,Y)
 
 # Declare dependent variable(Y) and independent variable(X)
 
 X = df['Head Size(cm^3)'].values
 Y = df['Brain Weight(grams)'].values
 print(df.shape)
-df.head()
+print('Before head')
+print(df.head())
 
 
 # Plot the Input Data
@@ -49,7 +49,7 @@ print("coefficients for regression",b1, b0)
 
 
 # Plotting Values and Regression Line
-%matplotlib inline
+#%matplotlib inline
 
 plt.rcParams['figure.figsize'] = (10.0, 5.0)
 # max_x = np.max(X) + 100

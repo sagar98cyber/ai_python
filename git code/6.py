@@ -6,11 +6,12 @@ import matplotlib.pyplot as plt
 from sklearn.linear_model import LinearRegression
 from sklearn.metrics import mean_squared_error
 # read data
-df=pd.read_csv('E:\MD\headbrain.csv')
+df=pd.read_csv('headbrain.csv')
 X = df['Head Size(cm^3)'].values
 Y = df['Brain Weight(grams)'].values
 m = len(X)
 X=X.reshape(m,1)
+print(f'RESHAPE  {X}')
 reg=LinearRegression()
 reg=reg.fit(X,Y)
 
