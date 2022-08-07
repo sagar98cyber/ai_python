@@ -1,7 +1,3 @@
-from ntpath import join
-from re import S
-from tkinter.ttk import Separator
-
 separator1 = ' ' 
 
 str1 = '    Mr. Sagar     '
