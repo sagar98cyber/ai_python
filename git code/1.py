@@ -1,19 +1,18 @@
 import numpy as np
 
+one = np.array([[10,20]])
+two = np.array([[15,25]])
+print(one)
+print(two, end="=B\n")
 
-a = np.array([[10,20]])
-b = np.array([[15,25]])
-print(a)
-print(b, end="=B\n")
-
-x = a+b
+x = one+two
 print(f'Addition:\n {x}')
 
-x = a.T+b.T
+x = one.T+two.T
 print(f'Add: \n {x}')
 #(a+b).T
 
-x = a - b
+x = one - two
 print(f'Substraction: \n {x}')
 
 #scalar
@@ -32,10 +31,9 @@ print(f'multiplication: \n {x}')
 #matrix scalar multiplication
 
 #matrix sum
-a= np.array([[11,13],[7,3],[22,17]])
-b = np.array([[4,10],[23,7],[9,15]])
-print (a + b)
-
+one= np.array([[11,13],[7,3],[22,17]])
+two = np.array([[4,10],[23,7],[9,15]])
+print (one + two)
 
 #identity matrix
 IM2 = np.eye(2)
@@ -44,6 +42,6 @@ IM3 = np.eye(3)
 print(IM3, end=" =IM 3\n")
 
 #inverse matrix
-a = ([[1,2,0],[0,1,2],[2,0,1]])
-print (a, end=" =a\n\n")
-print(np.linalg.inv(a), end=" =|a|")
+one = ([[1,2,0],[0,1,2],[2,0,1]])
+print (one, end=" =a\n\n")
+print(np.linalg.inv(one), end=" =|a|")

@@ -12,41 +12,26 @@ from sklearn.discriminant_analysis import LinearDiscriminantAnalysis
 from sklearn.naive_bayes import GaussianNB
 from sklearn.svm import SVC
 
-
-
 url = "iris.csv"
 names= ['sepal-length', 'sepal-width', 'petal-length', 'petal-width', 'class']
 dataset= pandas.read_csv(url, names=names)
 
-
 print(dataset.shape)
-
 
 print(dataset.head(30))
 
-
 print(dataset.describe())
 
-
 print(dataset.groupby('class').size())
-
 
 dataset.plot(kind='box', subplots = True, layout=(2,2), sharex=False, sharey=False)
 plt.show()
 
-
-
 dataset.hist()
 plt.show()
 
-
-
-
 scatter_matrix(dataset)
 plt.show()
-
-
-
 
 array = dataset.values
 X = array[:,0:4]
@@ -55,16 +40,8 @@ validation_size=0.20
 seed = 6
 X_train, X_test, Y_train, Y_test = model_selection.train_test_split(X, Y, test_size=validation_size, random_state = seed)
 
-
-
-
 seed = 6
 scoring = 'accuracy'
-
-
-
-
-
 
 models = []
 models.append (('LR', LogisticRegression()))
@@ -85,16 +62,9 @@ for name, model in models:
     msg= "%s:  %f  (%f)" % (name, cv_results.mean(), cv_results.std())
     print(msg)
 
-
-
-
-
 fig =plt.figure()
 fig.suptitle('Algorithm Comparision')
 ax= fig.add_subplot(111)
 plt.boxplot(results)
 ax. set_xticklabels(names)
 plt.show()
-
-
-

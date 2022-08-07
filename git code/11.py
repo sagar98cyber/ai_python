@@ -6,10 +6,10 @@ import pandas as pd
 from sklearn.preprocessing import MinMaxScaler
 import seaborn as sns
 from matplotlib import pyplot as plt
-%matplotlib inline
+#%matplotlib inline
 
 
-df = pd.read_csv("E:\MD\Mall_Customers.csv")
+df = pd.read_csv("Mall_Customers.csv")
 df.head()
 
 

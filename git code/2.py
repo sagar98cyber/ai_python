@@ -1,18 +1,5 @@
 # dataframe using pandas
 import pandas as pd
-df = pd.DataFrame ({'Name' : ['Anubhav', 'Reyansh', 'Shruti', 'Sanaya'], 'Salary': [10000, 20000, 10000, 35000]})
-print (df.head())
-
-# calculate statistics
-print ('Min :' +str (df['Salary'].min()))
-print ('Max :' +str (df['Salary'].max()))
-print ('Mean :' +str (df['Salary'].mean()))
-print ('Median :' +str (df['Salary'].median()))
-print ('Mod :' +str (df['Salary'].mode()))
-print('\n\n)')
-
-df['Salary'].describe()
-df['Salary'].describe()['count']
 
 
 # data plotting

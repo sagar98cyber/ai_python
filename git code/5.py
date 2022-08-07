@@ -6,17 +6,14 @@ import matplotlib.pyplot as plt
 # read data
 df=pd.read_csv('headbrain.csv')
 
-
 #np.corrcoef(X,Y)
 
 # Declare dependent variable(Y) and independent variable(X)
-
 X = df['Head Size(cm^3)'].values
 Y = df['Brain Weight(grams)'].values
 print(df.shape)
 print('Before head')
 print(df.head())
-
 
 # Plot the Input Data
 plt.scatter(X, Y, c='green', label='Data points')
@@ -24,7 +21,6 @@ plt.xlabel('Head Size in cm3')
 plt.ylabel('Brain Weight in grams')
 plt.legend()
 plt.show()
-
 
 # Calculating coefficient
 
@@ -50,7 +46,6 @@ print("coefficients for regression",b1, b0)
 
 # Plotting Values and Regression Line
 #%matplotlib inline
-
 plt.rcParams['figure.figsize'] = (10.0, 5.0)
 # max_x = np.max(X) + 100
 # min_x = np.min(X) - 100
@@ -61,12 +56,10 @@ y = b0 + b1 * X
 plt.plot(X, y, color='blue', label='Regression Line')
 # Ploting Scatter Points
 plt.scatter(X, Y, c='green', label='Scatter data')
-
 plt.xlabel('Head Size in cm3')
 plt.ylabel('Brain Weight in grams')
 plt.legend()
 plt.show()
-
 
 # Calculating Root Mean Squares Error
 rmse = 0
@@ -76,8 +69,6 @@ for i in range(n):
     
 rmse = np.sqrt(rmse/n)
 print("Root Mean Square Error is",rmse)
-
-
 
 # Calculating R2 Score
 ss_tot = 0

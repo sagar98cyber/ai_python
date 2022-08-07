@@ -30,6 +30,7 @@ from sklearn.compose import ColumnTransformer
 from sklearn.preprocessing import OneHotEncoder
 ct = ColumnTransformer(transformers=[('encoder', OneHotEncoder(), [0])], 
                        remainder='passthrough')
+print(f'Independent Variable: \n{X}')
 X = np.array(ct.fit_transform(X))
 print(X)
 
@@ -37,10 +38,11 @@ print(X)
 from sklearn.preprocessing import LabelEncoder
 le = LabelEncoder()
 y = le.fit_transform(y)
-print(y)
+print(f'Dependent Variable\n{y}')
 
 # Splitting the dataset into the Training set and Test set
 from sklearn.model_selection import train_test_split
+print(f'Test Train\n')
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.2, random_state = 1)
 print(X_train)
 print(X_test)
